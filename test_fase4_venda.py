@@ -36,7 +36,7 @@ from models.venda import (
 def linha(titulo: str) -> None:
     print(f"\n{'=' * 60}\n{titulo}\n{'=' * 60}")
 
-PASTA_TESTE = "backups/teste_temp_fase4"
+PASTA_TESTE = "backups/teste_temp_fase4_c"
 CAMINHO_BANCO = f"{PASTA_TESTE}/loja_teste_fase4.db.enc"
 
 if os.path.exists(PASTA_TESTE):
@@ -83,8 +83,8 @@ p2 = buscar_produto_por_id(conexao, produto2_id)
 
 assert p1[10] == 8, f"Estoque P1 esperado 8, tem {p1[10]}"
 assert p2[10] == 4, f"Estoque P2 esperado 4, tem {p2[10]}"
-assert p1[11] == data_antes, "Data ultima venda P1 não atualizada"
-assert p2[11] == data_antes, "Data ultima venda P2 não atualizada"
+assert p1[12] == data_antes, "Data ultima venda P1 não atualizada"
+assert p2[12] == data_antes, "Data ultima venda P2 não atualizada"
 
 print("[OK] Venda criada, estoque e última venda atualizados")
 
